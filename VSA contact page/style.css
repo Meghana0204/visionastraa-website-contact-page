@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Poppins', sans-serif; 
     background-color: #f4f4f4; 
@@ -24,41 +23,6 @@ header {
     height: auto;
     float: left;
 }
-
-nav {
-    display: flex;
-    gap: 35px;
-    background-color: rgba(255, 255, 255, 0.2); 
-    padding: 2px 20px;
-    border-radius: 20px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
-    transition: all 0.3s ease;
-    position: absolute;
-    top: 50px;
-    right: 25%; 
-    transform: translateX(50%);
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 18px;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-}
-
-nav a:hover {
-    color: #000;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-nav:hover {
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.4); 
-}
-
 /* Main section */
 .container {
     background-color: #ffffff;
@@ -218,4 +182,86 @@ footer i:hover {
 }
 .info-item .address i{
     margin-right: 10px;
+}
+/* Responsive Media Queries */
+
+/* General Reset for Mobile */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Slightly smaller font for mobile */
+    }
+
+    /* Header */
+    header {
+        padding: 15px; /* Less padding on mobile */
+        text-align: center; /* Center-align the content for mobile */
+    }
+
+    .logo {
+        width: 100px; /* Slightly smaller logo for mobile */
+    }
+
+    /* Main Section */
+    .container {
+        width: 90%; /* Make the container wider for mobile */
+        padding: 30px; /* Reduce padding on mobile */
+    }
+
+    h2 {
+        font-size: 36px; /* Adjust heading size for mobile */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px; /* Smaller input fields for mobile */
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        padding: 12px 40px;
+        font-size: 16px; /* Adjust button size for mobile */
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px 0;
+    }
+
+    .info-item {
+        padding: 30px 20px; /* Reduce padding in info-item */
+    }
+
+    /* Address and icons alignment */
+    .info-item .address {
+        flex-direction: row; /* Keep icon and text in a row on mobile */
+    }
+}
+
+/* For very small screens (less than 480px) */
+@media (max-width: 480px) {
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    h2 {
+        font-size: 28px; /* Further reduce font size on very small screens */
+    }
+
+    button[type="submit"] {
+        padding: 10px 35px;
+        font-size: 14px;
+    }
+
+    .info-item {
+        padding: 20px 15px; /* Reduce info-item padding further */
+    }
+
+    footer i {
+        font-size: 18px; /* Slightly smaller icons in footer */
+    }
 }
